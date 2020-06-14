@@ -1,11 +1,11 @@
-String basePath = 'example6'
+String jobFolder = 'example6'
 String jobName = 'test2_example_job'
-
-folder(basePath) {
-    description 'This example shows how to include script resources from the workspace.'
+String jobDescription = 'This is a basic description of the job.'
+folder(jobFolder) {
+    description jobDescription
 }
 
-job("$basePath/$jobName") {
+job("$jobFolder/$jobName") {
 
     steps {
         shell '''
